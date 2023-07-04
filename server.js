@@ -43,6 +43,7 @@ app.get("/filteredimage", async (req, res) => {
       deleteLocalFiles([filteredPath]);
     });
   } catch (error) {
+    console.log(error);
     res.status(422).send("Unable to process image");
   }
 });
